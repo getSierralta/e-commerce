@@ -26,11 +26,12 @@ body {
     --color-secundary: #C64191;
     --color-terciary: #FF8600;
     --color-gold: #f0c040;
+    --color-green: #20A020;
     --color-white: #ede7e3;
     --color-grey: #1B1F3B;
     --color-black: #080708;
     --color-grey-light: #c2b2bd;
-    --semi-translucent-light-grey: rgba(194, 178, 189, .5);
+    --semi-translucent-light-grey: rgba(194, 178, 189, .2);
 }
 
 /* Layout */
@@ -80,31 +81,79 @@ a:hover {
     color: var(--color-terciary);
 }
 
-/*Header*/
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
+li{
+  margin-top: 1rem;
+}
+button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem var(--color-grey-light) solid;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+button:hover{
+  border: 0.1rem var(--color-grey) solid;
+}
+button.primary{
+  background-color: var(--color-gold);
+}
+button.block{
+  width: 100%;
+}
+/*Header*/
+
 header a {
-    color: var(--color-white);
-    padding: 1rem;
+  color: var(--color-white);
+  padding: 1rem;
 }
 
 .title {
-    margin: 2rem;
-    font-size: 3rem;
-    color: var(--color-primary-light);
-    font-family: 'Monoton', cursive;
-    font-weight: 400;
+  margin: 2rem;
+  font-size: 3rem;
+  color: var(--color-primary-light);
+  font-family: 'Monoton', cursive;
+  font-weight: 400;
 }
 
 .center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Row*/
+
+.row.center.rowcenter{
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.top{
+  align-items: flex-start;
+}
+
+.col-1{
+  padding: 2rem;
+  flex: 1 1 25rem;
+  max-width: 50%;
+}
+
+.col-2{
+  flex: 2 1 50rem;
 }
 
 /* Images */
@@ -115,6 +164,9 @@ img {
 .medium {
     max-width: 29rem;
     width: 100%;
+}
+.large{
+  width: 100%;
 }
 
 /*Cards*/
@@ -133,6 +185,7 @@ img {
 .card-body > *{
     margin-bottom: 0.5rem;
 }
+
 .price{
     font-size: 2rem;
 }
@@ -141,4 +194,17 @@ img {
 .rating span{
     color: var(--color-gold);
     margin: 0.1rem;
+}
+
+.rating span:last-child{
+  color: var(--color-black);
+}
+
+/* Alert */ 
+.success{
+  color: var(--color-green);
+}
+
+.error{
+  color: var(--color-secundary);
 }
