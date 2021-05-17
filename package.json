@@ -1,0 +1,27 @@
+{
+  "name": "e-commerce",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "MERN e-commerce",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getSierralta/e-commerce.git"
+  },
+  "author": "Laura Sierralta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getSierralta/e-commerce/issues"
+  },
+  "homepage": "https://github.com/getSierralta/e-commerce#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
